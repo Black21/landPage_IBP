@@ -27,7 +27,7 @@ const services = [
 
 const WorshipTimes = () => {
   return (
-    <section id="horarios" className="py-24 bg-secondary">
+    <section id="horarios" className="py-24 bg-dark">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,12 +39,12 @@ const WorshipTimes = () => {
           <p className="text-accent uppercase tracking-[0.2em] text-sm font-semibold mb-3">
             Programação
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">
+          <h2 className="font-display text-4xl md:text-5xl font-extrabold text-white">
             Horários dos Cultos
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
@@ -52,17 +52,17 @@ const WorshipTimes = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="bg-background rounded-xl p-8 text-center shadow-sm hover:shadow-lg transition-shadow border border-border"
+              className="bg-dark-light/50 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/5 hover:border-accent/30 hover:glow-accent transition-all group"
             >
-              <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-5">
+              <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-accent/20 transition-colors">
                 <service.icon className="h-6 w-6 text-accent" />
               </div>
-              <h3 className="font-display text-xl font-bold text-foreground mb-2">
+              <h3 className="font-display text-xl font-bold text-white mb-2">
                 {service.title}
               </h3>
-              <p className="text-accent font-semibold text-lg mb-1">{service.time}</p>
-              <p className="text-muted-foreground text-sm font-medium mb-3">{service.day}</p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-accent font-bold text-2xl mb-1">{service.time}</p>
+              <p className="text-white/40 text-sm font-medium mb-3">{service.day}</p>
+              <p className="text-white/50 text-sm leading-relaxed">
                 {service.description}
               </p>
             </motion.div>
