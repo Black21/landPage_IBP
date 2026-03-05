@@ -3,7 +3,7 @@ import communityImage from "@/assets/community.jpg";
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-24 bg-dark-light">
+    <section id="sobre" className="py-24 bg-background dark:bg-dark-light">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           {/* Image */}
@@ -32,22 +32,22 @@ const AboutSection = () => {
             <p className="text-accent uppercase tracking-[0.2em] text-sm font-semibold mb-3">
               Sobre nós
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+            <h2 className="font-display text-4xl md:text-5xl font-extrabold text-foreground dark:text-white mb-6 leading-tight">
               Uma comunidade de{" "}
               <span className="text-gradient-electric">fé e amor</span>
             </h2>
-            <p className="text-white/60 text-lg leading-relaxed mb-6">
-              Há mais de 30 anos, a Igreja da Luz tem sido um refúgio de esperança e
+            <p className="text-foreground/60 dark:text-white/60 text-lg leading-relaxed mb-6">
+              A Igreja Batista da Paz tem sido um refúgio de esperança e
               transformação. Nossa missão é compartilhar o amor de Deus e construir
               uma comunidade acolhedora para todas as pessoas.
             </p>
-            <p className="text-white/45 leading-relaxed mb-8">
+            <p className="text-foreground/45 dark:text-white/45 leading-relaxed mb-8">
               Acreditamos que cada pessoa é única e especial aos olhos de Deus.
               Aqui você encontrará um lugar para crescer na fé, desenvolver amizades
               verdadeiras e servir ao próximo com alegria.
             </p>
 
-            <div className="grid grid-cols-3 gap-6">
+       {/*      <div className="grid grid-cols-3 gap-6">
               {[
                 { number: "30+", label: "Anos" },
                 { number: "500+", label: "Membros" },
@@ -60,7 +60,7 @@ const AboutSection = () => {
                   <p className="text-white/40 text-sm mt-1">{stat.label}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>

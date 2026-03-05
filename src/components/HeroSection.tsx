@@ -27,7 +27,7 @@ const HeroSection = () => {
         >
           <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
           <span className="text-accent text-sm font-medium tracking-wide">
-            Culto ao vivo todo domingo às 9h
+            Culto todo domingo às 19h
           </span>
         </motion.div>
 
@@ -37,9 +37,9 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-display text-5xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 leading-[1.05]"
         >
-          Transformando vidas
+          Bênçãos
           <br />
-          <span className="text-gradient-electric">pela fé</span>
+          <span className="text-gradient-electric">Sem medidas</span>
         </motion.h1>
 
         <motion.p
@@ -48,8 +48,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-white/70 text-lg md:text-xl font-body max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Uma igreja moderna, viva e conectada com Deus.
-          Venha fazer parte dessa comunidade que transforma.
+          Jesus plano maior, braço forte e mão amiga.
         </motion.p>
 
         <motion.div

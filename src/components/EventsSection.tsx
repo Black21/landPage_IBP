@@ -3,28 +3,34 @@ import { MapPin, ArrowRight } from "lucide-react";
 
 const events = [
   {
-    date: "15 Mar",
-    title: "Retiro de Jovens",
-    location: "Sítio Esperança",
-    description: "Um final de semana de renovação espiritual para jovens de 15 a 30 anos.",
+    date: "6 Mar",
+    title: "Retiro das Mulheres",
+    location: "Sítio",
+    description: "Um final de semana de renovação espiritual para mulheres.",
   },
   {
-    date: "22 Mar",
-    title: "Café com Propósito",
+    date: "28 Mar às 19h",
+    title: "13º Encontro dos Varões",
     location: "Salão da Igreja",
-    description: "Manhã especial para conhecer novos membros e compartilhar testemunhos.",
+    description: "Tema: Homens de fé em ação.",
   },
   {
-    date: "05 Abr",
-    title: "Cantata de Páscoa",
-    location: "Templo Principal",
-    description: "Apresentação musical especial celebrando a ressurreição de Cristo.",
+    date: "1º domingo",
+    title: "Ceia do Senhor",
+    location: "Salão da Igreja",
+    description: "Celebrada todo primeiro domingo do mês.",
+  },
+  {
+    date: "2º domingo",
+    title: "Assembleia Administrativa",
+    location: "Salão da Igreja",
+    description: "Reunião a cada segundo domingo.",
   },
 ];
 
 const EventsSection = () => {
   return (
-    <section id="eventos" className="py-24 bg-dark">
+    <section id="eventos" className="py-24 bg-background dark:bg-dark">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,7 +42,7 @@ const EventsSection = () => {
           <p className="text-accent uppercase tracking-[0.2em] text-sm font-semibold mb-3">
             Agenda
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-extrabold text-white">
+          <h2 className="font-display text-4xl md:text-5xl font-extrabold text-foreground dark:text-white">
             Próximos Eventos
           </h2>
         </motion.div>
@@ -49,7 +55,7 @@ const EventsSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-6 bg-dark-light/50 border border-white/5 rounded-2xl p-6 hover:border-accent/20 transition-all group"
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-6 bg-[#3c83f6] text-white dark:bg-dark-light/50 dark:text-foreground border border-white/5 rounded-2xl p-6 hover:border-accent/20 transition-all group"
             >
               <div className="flex-shrink-0 w-20 h-20 bg-accent rounded-2xl flex flex-col items-center justify-center">
                 <span className="text-accent-foreground font-extrabold text-xl leading-none">
@@ -61,16 +67,16 @@ const EventsSection = () => {
               </div>
 
               <div className="flex-1">
-                <h3 className="font-display text-xl font-bold text-white mb-1">
+                <h3 className="font-display text-xl font-bold text-white dark:text-foreground mb-1">
                   {event.title}
                 </h3>
-                <div className="flex items-center gap-4 text-white/40 text-sm mb-2">
+                <div className="flex items-center gap-4 text-white dark:text-foreground/40 text-sm mb-2">
                   <span className="flex items-center gap-1">
                     <MapPin className="h-3.5 w-3.5" />
                     {event.location}
                   </span>
                 </div>
-                <p className="text-white/35 text-sm">{event.description}</p>
+                <p className="text-white dark:text-foreground/35 text-sm">{event.description}</p>
               </div>
 
               <ArrowRight className="h-5 w-5 text-white/20 group-hover:text-accent transition-colors hidden sm:block" />
