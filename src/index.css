@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,46 +6,46 @@
 
 @layer base {
   :root {
-    --background: 40 33% 97%;
-    --foreground: 220 30% 15%;
+    --background: 220 20% 97%;
+    --foreground: 225 25% 12%;
 
-    --card: 40 30% 95%;
-    --card-foreground: 220 30% 15%;
+    --card: 220 18% 94%;
+    --card-foreground: 225 25% 12%;
 
-    --popover: 40 33% 97%;
-    --popover-foreground: 220 30% 15%;
+    --popover: 220 20% 97%;
+    --popover-foreground: 225 25% 12%;
 
-    --primary: 220 30% 15%;
-    --primary-foreground: 40 33% 97%;
+    --primary: 225 25% 12%;
+    --primary-foreground: 220 20% 97%;
 
-    --secondary: 40 30% 90%;
-    --secondary-foreground: 220 30% 15%;
+    --secondary: 220 15% 90%;
+    --secondary-foreground: 225 25% 12%;
 
-    --muted: 40 20% 92%;
-    --muted-foreground: 220 15% 45%;
+    --muted: 220 12% 92%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 38 70% 50%;
-    --accent-foreground: 40 33% 97%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 40 20% 88%;
-    --input: 40 20% 88%;
-    --ring: 38 70% 50%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
-    --gold: 38 70% 50%;
-    --gold-light: 40 65% 70%;
-    --gold-dark: 36 75% 35%;
-    --navy: 220 30% 15%;
-    --navy-light: 220 20% 30%;
-    --cream: 40 33% 97%;
-    --cream-dark: 40 25% 90%;
+    --electric: 217 91% 60%;
+    --electric-light: 215 90% 72%;
+    --electric-glow: 217 100% 50%;
+    --dark: 225 25% 12%;
+    --dark-light: 225 18% 22%;
+    --light: 220 20% 97%;
+    --light-dim: 220 15% 90%;
 
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Source Sans 3', sans-serif;
+    --font-display: 'Outfit', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -54,29 +54,29 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 217 91% 60%;
   }
 
   .dark {
-    --background: 220 30% 8%;
-    --foreground: 40 33% 97%;
-    --card: 220 28% 12%;
-    --card-foreground: 40 33% 97%;
-    --popover: 220 28% 12%;
-    --popover-foreground: 40 33% 97%;
-    --primary: 40 33% 97%;
-    --primary-foreground: 220 30% 15%;
-    --secondary: 220 25% 18%;
-    --secondary-foreground: 40 33% 97%;
-    --muted: 220 20% 18%;
-    --muted-foreground: 40 15% 65%;
-    --accent: 38 70% 50%;
-    --accent-foreground: 40 33% 97%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 220 20% 20%;
-    --input: 220 20% 20%;
-    --ring: 38 70% 50%;
+    --background: 225 25% 7%;
+    --foreground: 220 20% 95%;
+    --card: 225 22% 11%;
+    --card-foreground: 220 20% 95%;
+    --popover: 225 22% 11%;
+    --popover-foreground: 220 20% 95%;
+    --primary: 220 20% 95%;
+    --primary-foreground: 225 25% 7%;
+    --secondary: 225 20% 15%;
+    --secondary-foreground: 220 20% 95%;
+    --muted: 225 18% 16%;
+    --muted-foreground: 220 12% 55%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 225 18% 18%;
+    --input: 225 18% 18%;
+    --ring: 217 91% 60%;
   }
 }
 
@@ -94,10 +94,16 @@
 }
 
 @layer utilities {
-  .text-gradient-gold {
-    background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
+  .text-gradient-electric {
+    background: linear-gradient(135deg, hsl(var(--electric)) 0%, hsl(var(--electric-light)) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, hsl(225 25% 7%) 0%, hsl(225 30% 14%) 50%, hsl(217 40% 18%) 100%);
+  }
+  .glow-accent {
+    box-shadow: 0 0 30px -5px hsl(var(--electric) / 0.4);
   }
 }

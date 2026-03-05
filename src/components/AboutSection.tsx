@@ -3,7 +3,7 @@ import communityImage from "@/assets/community.jpg";
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-24 bg-background">
+    <section id="sobre" className="py-24 bg-dark-light">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           {/* Image */}
@@ -17,9 +17,9 @@ const AboutSection = () => {
             <img
               src={communityImage}
               alt="Comunidade da igreja reunida"
-              className="rounded-2xl shadow-xl w-full object-cover aspect-square"
+              className="rounded-3xl w-full object-cover aspect-square border border-white/5"
             />
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/20 rounded-2xl -z-10" />
+            <div className="absolute -bottom-3 -right-3 w-full h-full bg-accent/10 rounded-3xl -z-10" />
           </motion.div>
 
           {/* Text */}
@@ -32,16 +32,16 @@ const AboutSection = () => {
             <p className="text-accent uppercase tracking-[0.2em] text-sm font-semibold mb-3">
               Sobre nós
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
+            <h2 className="font-display text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
               Uma comunidade de{" "}
-              <span className="text-gradient-gold">fé e amor</span>
+              <span className="text-gradient-electric">fé e amor</span>
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+            <p className="text-white/60 text-lg leading-relaxed mb-6">
               Há mais de 30 anos, a Igreja da Luz tem sido um refúgio de esperança e
               transformação. Nossa missão é compartilhar o amor de Deus e construir
               uma comunidade acolhedora para todas as pessoas.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-white/45 leading-relaxed mb-8">
               Acreditamos que cada pessoa é única e especial aos olhos de Deus.
               Aqui você encontrará um lugar para crescer na fé, desenvolver amizades
               verdadeiras e servir ao próximo com alegria.
@@ -54,10 +54,10 @@ const AboutSection = () => {
                 { number: "15", label: "Ministérios" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <p className="font-display text-3xl font-bold text-accent">
+                  <p className="font-display text-3xl font-extrabold text-accent">
                     {stat.number}
                   </p>
-                  <p className="text-muted-foreground text-sm mt-1">{stat.label}</p>
+                  <p className="text-white/40 text-sm mt-1">{stat.label}</p>
                 </div>
               ))}
             </div>

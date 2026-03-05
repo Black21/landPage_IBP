@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contato" className="py-24 bg-secondary">
+    <section id="contato" className="py-24 bg-dark-light">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -15,12 +15,12 @@ const ContactSection = () => {
           <p className="text-accent uppercase tracking-[0.2em] text-sm font-semibold mb-3">
             Fale conosco
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">
+          <h2 className="font-display text-4xl md:text-5xl font-extrabold text-white">
             Entre em Contato
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {[
             {
               icon: MapPin,
@@ -53,14 +53,14 @@ const ContactSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="text-center"
+              className="text-center bg-dark/50 rounded-2xl p-6 border border-white/5"
             >
-              <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <item.icon className="h-5 w-5 text-accent" />
               </div>
-              <h3 className="font-display font-bold text-foreground mb-1">{item.title}</h3>
-              <p className="text-foreground font-medium text-sm">{item.info}</p>
-              <p className="text-muted-foreground text-sm">{item.detail}</p>
+              <h3 className="font-display font-bold text-white mb-1">{item.title}</h3>
+              <p className="text-white/70 font-medium text-sm">{item.info}</p>
+              <p className="text-white/40 text-sm">{item.detail}</p>
             </motion.div>
           ))}
         </div>
