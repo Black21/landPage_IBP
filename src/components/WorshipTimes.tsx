@@ -60,7 +60,7 @@ const WorshipTimes = () => {
               <h3 className="font-display text-xl font-bold text-white dark:text-foreground mb-2">
                 {service.title}
               </h3>
-              <p className="text-accent font-bold text-2xl mb-1">{service.time}</p>
+              <p className="text-white dark:text-accent font-bold text-2xl mb-1">{service.time}</p>
               <p className="text-white dark:text-foreground/40 text-sm font-medium mb-3">{service.day}</p>
               <p className="text-white dark:text-foreground/50 text-sm leading-relaxed">
                 {service.description}

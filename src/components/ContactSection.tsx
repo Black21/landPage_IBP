@@ -45,7 +45,7 @@ const ContactSection = () => {
                 className="text-center bg-[#3c83f6] text-white dark:bg-dark/50 dark:text-foreground rounded-2xl p-6 border border-white/5 hover:border-accent/30 transition-colors cursor-pointer h-full"
               >
                 <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="h-5 w-5 text-accent" />
+                  <item.icon className="h-5 w-5 text-white dark:text-accent" />
                 </div>
                 <h3 className="font-display font-bold text-white dark:text-foreground mb-1">{item.title}</h3>
                 <p className="text-white dark:text-foreground/70 font-medium text-sm">{item.info}</p>
