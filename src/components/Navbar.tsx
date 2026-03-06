@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from '../assets/logo.png';
@@ -15,15 +15,29 @@ const navLinks = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
+  const [pendingHref, setPendingHref] = useState<string | null>(null);
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    setOpen(false);
-    
-    const target = document.querySelector(href);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    if (open) {
+      e.preventDefault();
+      setPendingHref(href);
+      setOpen(false);
     }
   };
+
+  useEffect(() => {
+    if (!open && pendingHref) {
+      const timer = setTimeout(() => {
+        const target = document.querySelector(pendingHref!);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        setPendingHref(null);
+      }, 350);
+      return () => clearTimeout(timer);
+    }
+  }, [open, pendingHref]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background dark:bg-dark/80 backdrop-blur-xl border-b border-white/5">

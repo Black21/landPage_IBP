@@ -48,7 +48,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-white/70 text-lg md:text-xl font-body max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Jesus plano maior, braço forte e mão amiga.
+          Jesus plano melhor, braço forte e mão amiga.
         </motion.p>
 
         <motion.div

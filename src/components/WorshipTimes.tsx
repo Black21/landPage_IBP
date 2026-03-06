@@ -1,17 +1,10 @@
 import { motion } from "framer-motion";
-import { Clock, Calendar, BookOpen } from "lucide-react";
+import { Clock, Calendar, BookOpen, SunDim } from "lucide-react";
 
 const services = [
   {
-    icon: BookOpen,
-    title: "Culto Dominical",
-    day: "Domingos",
-    time: "19:00",
-    description: "Celebração principal com louvor e pregação da Palavra.",
-  },
-  {
     icon: Calendar,
-    title: "Estudo Bíblico",
+    title: "Escola Bíblica Dominical",
     day: "Domingos",
     time: "09:00",
     description: "Momento de aprofundamento nas Escrituras.",
@@ -22,6 +15,13 @@ const services = [
     day: "Quartas-feiras",
     time: "19:00",
     description: "Reunião de oração e intercessão pela comunidade.",
+  },
+  {
+    icon: SunDim,
+    title: "Amigos de Missão",
+    day: "Terças-feiras",
+    time: "18:00",
+    description: "Reunião das crianças.",
   },
 ];
 
@@ -40,7 +40,7 @@ const WorshipTimes = () => {
             Programação
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-extrabold text-foreground dark:text-white">
-            Horários dos Cultos
+            Horários das Programações
           </h2>
         </motion.div>
 
